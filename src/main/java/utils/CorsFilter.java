@@ -32,7 +32,6 @@ public class CorsFilter implements ContainerRequestFilter, ContainerResponseFilt
         // if there is no Origin header, then it is not a cross origin request - don't do anything.
         if (request.getHeaderString("Origin") == null) {
             return;
-
         }
 
         // If it is a preflight request add all the CORS headers here.
