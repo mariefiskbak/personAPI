@@ -54,7 +54,6 @@ public class PersonFacade implements IPersonFacade {
 
     @Override
     public PersonDTO deletePerson(int id) {
-
         EntityManager em = getEntityManager();
         Person p = em.find(Person.class, id);
         if (p == null)
