@@ -1,0 +1,55 @@
+GET http://localhost:8080/rest-persons/api/xxx
+
+
+###
+GET http://localhost:8080/rest-persons/api/xxx/count
+
+
+
+### GET PERSON BY ID
+GET http://localhost:8080/rest-persons/api/person/p/4
+accept:application/json
+
+### GET ALL PERSONS
+GET http://localhost:8080/rest-persons/api/person/p/all
+accept:application/json
+
+### ADD PERSON
+POST http://localhost:8080/rest-persons/api/person/add
+Content-Type: application/json
+accept:application/json
+
+{
+  "fName": "Peter",
+  "lName": "Madsen",
+  "phone": "12343678",
+  "address": {
+    "address": "Vejen 4",
+    "zip": 3456,
+    "city": "Birkene"
+  }
+}
+
+### EDIT PERSON
+PUT http://localhost:8080/rest-persons/api/person/p/edit/101
+Content-Type: application/json
+accept:application/json
+
+{
+  "fName": "Lars",
+  "lName": "Hansen",
+  "phone": "87654321"
+}
+
+### DELETE PERSON
+DELETE http://localhost:8080/rest-persons/api/person/p/delete/52
+Content-Type: application/json
+accept:application/json
+
+###
+##
+#POST http://localhost:8080/devops_starter_war_exploded/api/xxx
+#Content-Type: application/json
+##User-Agent: Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion
+
+#{"str1": "First Property", "str2": "Second Property"}
